@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background: #000 url(../../img/item.png);
+  box-sizing: border-box;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+
+}
+
+.page.header {
+  display: grid;
+  background-color: #ab14ab;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
+  grid-template-columns: 1fr;
+  padding: 1em;
+}
+
+.ui.icon {
+  color: #605e5e;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  font-size: 1.5vw;
+  align-self: center;
+}
+
+.ui.divider {
+  box-shadow: 1px 2px 3px rgb(250, 250, 250);
+}
+
+.title {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.bold-title {
+  font-weight: 700;
+}
+
+.icon.img {
+  background-image: url(../../img/icon.png);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  width: 15vw;
+  height: 15vw;
+  margin: 0 auto;
+  border: 1px solid rgba(43, 41, 41, 0.6);
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(43, 41, 41, 0.6);
+}
+
+.ui.segment.one {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.9em;
+  margin-right: 4%;
+  box-shadow: 1px 3px 5px #4b424b;
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
+
+.ui.three.cards {
+  padding-left: 4%;
+}
+
+.ui.three.cards .ui.orange.card {
+  margin: 5px;
+}
+
+.ui.three.cards .ui.orange.card .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ui.segment.details {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.9em;
+  margin: 3% 5%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.ui.container {
+  position: relative;
+  background-color: rgba(228, 190, 102, 0.637);
+  border: none;
+  margin-top: 10px;
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.ui.list h3 {
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.ui.list div {
+  margin: 5px auto;
+  text-align: center;
+}
+
+.ul.items {
+  list-style: none;
+  text-align: center;
+  background-color: rgba(195, 190, 190, 0.924);
+
+}
+
+.ul.items li {
+  width: 40%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.ul.items li span {
+  font-weight: 900;
+  color: rgb(179, 37, 37)
+}
+
+.ui.list {
+  padding: 10px;
+  height: 100%;
+}
+
+.detailHead {
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.detailHead h1 {
+  border: none;
+  padding-left: 10px;
+  color: orangered;
+  margin-bottom: 2;
+}
+
+.ui.divided.list {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ui.divided.list .item .header {
+  margin-bottom: 5px;
+  color: orangered
+}
+
+.detailHead .extra.content {
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  color: rgb(87, 77, 74)
+}
+
+.imgDiv {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgba(43, 41, 41, 0.6);
+  margin: 0
+}
+
+.tel {
+  position: relative;
+  color: rgb(255, 136, 0)
+}
+
+.imgDiv img {
+  width: 100%;
+  height: 200px
+}
+
+.ui.segment.two {
+  margin-top: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  background: rgba(226, 61, 241, 0.897);
+  color: white;
+  opacity: 0.9;
+}
+
+.error {
+  color: rgb(179, 37, 37);
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  background-color: #4b424b;
+  color: #fff;
+  width: 100%;
+  bottom: 0%;
+  z-index: 2;
+}
+
+footer .time {
+  margin-left: 10px;
+}
+
+footer .footer {
+  padding: 10px;
+}
+
+.ui.icon.theme {
+  color: rgb(179, 238, 43);
+  margin-bottom: 10px;
+  font-size: 2vw;
+  cursor: pointer;
+  text-shadow: 0px 2px 10px rgb(241, 243, 238);
+}
+
+.ui.icon.mobile.alternate.device {
+  color: rgb(179, 238, 43);
+  position: absolute;
+  right: 3%;
+  padding-right: 25px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 2vw;
+  cursor: pointer;
+  text-shadow: 0px 2px 10px rgb(255, 255, 255);
+}
+
+.changeSize {
+  width: 250px;
+  transition: all cubic-bezier(0.175, 0.885, 0.44, 1);
+}
+
+.changeBg {
+  background-image: url(../../img/sec.png);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (min-width: 1281px) {
+
+  .ui.three.cards .ui.orange.card {
+    height: 445.37px;
+  }
+}
+
+@media (min-width: 1029px) and (max-width: 1280px) {
+  .ui.three.cards {
+    display: grid;
+    grid-gap: 0.9em;
+    grid-auto-flow: column;
+    overflow-y: hidden;
+    padding-left: 1%
+  }
+
+  .ui.three.cards .ui.orange.card link {
+    margin-left: 0%;
+    max-width: 290px;
+    width: auto;
+  }
+
+  .ui.three.cards .ui.orange.card {
+    height: 445.37px;
+  }
+}
+
+@media (min-width: 986px) and (max-width: 1029px) {
+  .ui.three.cards {
+    display: inline-flex;
+  }
+
+  .ui.three.cards .ui.orange.card link {
+    margin-left: 1%;
+    min-width: 290px;
+    width: auto;
+  }
+
+  .ui.three.cards .ui.orange.card {
+    height: 445.37px;
+  }
+}
+
+@media(min-width: 481px) and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+
+  .ui.segment.details {
+    text-align: center;
+  }
+
+  .ui.container.main {
+    margin-top: 25px;
+  }
+
+  .ui.icon.theme {
+    font-size: 4vw;
+  }
+
+  .ui.icon.search {
+    font-size: 1.5em;
+  }
+
+  .ui.icon.mobile.alternate.device {
+    font-size: 4vw;
+    left: 3.4%;
+  }
+
+  .changeSize {
+    color: orangered;
+    width: 100%;
+  }
+
+  .page.header {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .ui.segment.two {
+    margin-top: 60px;
+  }
+
+  .ui.three.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ui.three.cards .ui.orange.card link {
+    max-width: 400px;
+    min-width: 290px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .ui.three.cards .ui.orange.card {
+    height: 445.37px;
+  }
+
+  .icon.img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .ui.icon.search {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .ui.three.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ui.three.cards .ui.orange.card link {
+    min-width: 150px;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .ui.three.cards .ui.orange.card {
+    height: 445.37px;
+  }
+
+}

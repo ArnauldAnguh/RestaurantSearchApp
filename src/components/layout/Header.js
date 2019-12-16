@@ -4,8 +4,8 @@ import Title from './Title';
 
 const Header = () => {
   const span = () => {
-    const width = document.querySelector('body');
-    width.classList.toggle('changeSize');
+    const body = document.querySelector('body');
+    body.classList.toggle('changeSize');
   };
   const theme = () => {
     const bgElm = document.querySelector('body');

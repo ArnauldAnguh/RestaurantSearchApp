@@ -373,6 +373,17 @@ footer .footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+
+  .ui.icon.theme,
+  .ui.icon.mobile.alternate.device {
+    font-size: 3.5vw;
+  }
+
+  .changeSize {
+    width: 100%;
+    color: orangered
+  }
+
   .ui.three.cards {
     display: flex;
     justify-content: center;

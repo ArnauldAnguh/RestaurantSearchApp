@@ -39,7 +39,7 @@ const RestauDetails = props => {
             <tr>
               <td className='single line'>{values[0]}</td>
               <td>{values[2]}</td>
-              <td className='right aligned'>{values[5]}</td>
+              <td>{values[5]}</td>
               <td> {values[1]}</td>
               <td> {values[6]}</td>
             </tr>

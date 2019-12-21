@@ -4,6 +4,7 @@ import zomato from '../api/zomato';
 import SearchBar from './SearchBar';
 import RestaurantList from './RestaurantList';
 import RestaurantResultsShow from './RestaurantResultsShow';
+import Loader from './Loader';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 
@@ -12,24 +13,34 @@ class App extends React.Component {
     restaurant: [],
     term: '',
     errorMsg: '',
-    selectRestau: ''
+    selectRestau: '',
+    showLoader: false
   };
 
-  onSearchSubmit = async term => {
-    try {
-      const res = await zomato.get(
-        `/search?entity_id=280&entity_type=city&q=${term}&start=0&count=100`
-      );
-      this.setState({ restaurant: res.data.restaurants, city: term });
-    } catch (e) {
-      return this.setState({
-        errorMsg: `Oopss!! No Results Found for Search Term: '${term}'`
-      });
-    }
+  onSearchSubmit = term => {
+    this.setState({ showLoader: true }, async () => {
+      try {
+        const res = await zomato.get(
+          `/search?entity_id=280&entity_type=city&q=${term}&start=0&count=100`
+        );
+        this.setState({
+          showLoader: false,
+          restaurant: res.data.restaurants,
+          city: term
+        });
+      } catch (e) {
+        return this.setState({
+          showLoader: false,
+          errorMsg: `Oopss!! No Results Found for Search Term: '${term}'`
+        });
+      }
+    });
   };
 
   logic = () => {
-    return (
+    return this.state.showLoader ? (
+      <Loader message='wait a second' />
+    ) : (
       <div>
         <Header />
         <div className='ui container'>
@@ -41,7 +52,6 @@ class App extends React.Component {
                 restaurants={this.state.restaurant}
                 term={this.state.term}
                 errorMsg={this.state.errorMsg}
-                loader={this.state.showLoader}
                 resultsLen={this.state.restaurant.length}
               />
             </Route>

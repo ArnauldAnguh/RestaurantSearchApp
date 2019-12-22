@@ -385,17 +385,15 @@ footer .footer {
   }
 
   .ui.segment.one {
-    display: block;
-    grid-template-columns: 1fr;
-    grid-gap: 0.5em;
     margin-right: 1%;
     box-shadow: none;
     text-align: center;
     margin-left: 1%;
-    margin-bottom: 5%;
     border: none
   }
-
+   .ui.container {
+     border: none;
+   } 
   .ui.three.cards {
     display: flex;
     justify-content: center;
